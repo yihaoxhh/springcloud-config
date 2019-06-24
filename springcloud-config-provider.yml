@@ -1,0 +1,33 @@
+server:
+  port: 8003
+  servlet:
+    context-path: /provider
+
+spring:
+  application:
+    name: springcloud-user  # 微服务最重要的是取名字！微服务对外暴露的名字
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # 当前数据源操作类型
+    driver-class-name:  com.mysql.jdbc.Driver  # mysql驱动包
+    url: jdbc:mysql://47.101.42.108:3306/bj1901  # 数据库名称
+    username: root
+    password: 1947728008YJH
+    
+logging:
+  level:
+    com.hzit.mapper: debug
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka  # eureka注册中心的地址  表示将当前应用(springcloud-dept)注册到(eureka-server)
+  instance:
+    instance-id: springcloud-user:8003   #修改别名
+    prefer-ip-address: true
+
+# info信息非必须
+info:
+  app.name:  springcloud-dept
+  company.name:  www.hzitxx.com
+  build.artifactId:  $project.artifactId$
+  build.version:  $project.version$
