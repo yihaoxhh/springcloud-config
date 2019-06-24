@@ -1,5 +1,9 @@
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-eureka-dev
 server:
-  port: 7001
+  port: 7002
 eureka:
   instance:
     hostname: localhost  # 表示当前eureka服务器地址
