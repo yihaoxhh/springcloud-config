@@ -13,6 +13,9 @@ eureka:
     client: 
         service-url: 
             defaultZone: http://localhost:7001/eureka/
+    instance:
+        instance-id: springcloud-user:8201   #修改别名
+        prefer-ip-address: true
 ---
 server: 
     port: 8202
@@ -24,3 +27,6 @@ eureka:
     client: 
         service-url: 
             defaultZone: http://localhost:7001/eureka/
+    instance:
+        instance-id: springcloud-user:8202   #修改别名
+        prefer-ip-address: true
