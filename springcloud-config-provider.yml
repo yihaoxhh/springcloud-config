@@ -4,6 +4,7 @@ server:
     context-path: /provider
 
 spring:
+  profiles: dev
   application:
     name: springcloud-user  # 微服务最重要的是取名字！微服务对外暴露的名字
   datasource:
